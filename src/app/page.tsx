@@ -48,8 +48,50 @@ export default function Home() {
             <div className="bg-indigo-500 p-1 ">02</div>
             <div className="bg-indigo-600 p-1 ">03</div>
           </div>
+          <div className="grid col-auto md:grid-cols-4 gap-1 mt-4">
+            <div className="bg-indigo-600 p-1 rounded-lg">01</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">02</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">03</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">04</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">05</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">06</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">07</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">08</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">09</div>
+          </div>
+          <div className="grid grid-cols-3 gap-1 mt-4">
+            <div className="bg-indigo-600 p-1 rounded-lg col-start-2">01</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">02</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">03</div>
+            <div className="bg-indigo-500 p-1 rounded-lg col-span-2">04</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">05</div>
+            <div className="bg-indigo-500 p-1 rounded-lg col-start-1 col-end-3">06</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">07</div>
+          </div>
+          <div className="grid grid-cols-5 gap-1 mt-4">
+            <div className="bg-indigo-600 p-1 rounded-lg row-span-2">01</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">02</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">03</div>
+            <div className="bg-indigo-500 p-1 rounded-lg row-span-3">04</div>
+            <div className="bg-indigo-600 p-1 rounded-lg row-span-2">05</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">06</div>
+            <div className="bg-indigo-600 p-1 rounded-lg row-span-2">07</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">08</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">09</div>
+          </div>
+          <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 gap-1 mt-4">
+            <div className="bg-indigo-600 p-1 rounded-lg col-span-2">01</div>
+            <div className="bg-indigo-500 p-1 rounded-lg col-span-2">02</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">03</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">04</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">05</div>
+            <div className="bg-indigo-500 p-1 rounded-lg col-span-2">06</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">07</div>
+            <div className="bg-indigo-500 p-1 rounded-lg">08</div>
+            <div className="bg-indigo-600 p-1 rounded-lg">09</div>
+          </div>
+        </div>
         </div>
       </div>
-    </div>
   );
 }
