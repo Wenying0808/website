@@ -38,7 +38,10 @@ export default {
       },
       margin:{
         '5': '5px',
-      }
+      },
+      container: {
+        center: true,
+      },
     },
   },
   plugins: [],

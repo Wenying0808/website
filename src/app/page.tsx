@@ -7,7 +7,7 @@ export default function Home() {
         sidebar
       </div>
       <div className=" bg-slate-900 basis-4/5 flex flex-col">
-        <div className="bg-slate-300">
+        <div className="bg-slate-300 w-full fixed">
           topbar
         </div>
         <div className="m-6">
@@ -91,7 +91,34 @@ export default function Home() {
             <div className="bg-indigo-600 p-1 rounded-lg">09</div>
           </div>
         </div>
+        <div className="container bg-indigo-800 p-4 columns-3">
+            <img 
+              src="https://picsum.photos/200/300" 
+              alt="random" 
+              className="w-64 float-none" 
+            />
+            <img 
+              src="https://picsum.photos/200/300" 
+              alt="random" 
+              className="w-64 float-none" 
+            />
+            <p className="bg-indigo-300">I am 1</p>
+            <p className="bg-indigo-300">I am 2</p>
+            <p className="bg-indigo-300">I am 3</p>
+            <p className="bg-indigo-300">I am 4</p>
+            <p className="bg-indigo-300">I am 5</p>
+        </div>
+        <div className="grid grid-cols-3 gap-4 p-4">
+          <div className="bg-indigo-300">01</div>
+          <div className="invisible ...">02</div>
+          <div className="bg-indigo-300">03</div>
+        </div>
+        <div className="container flex p-4 -space-x-1">
+          <div className="bg-indigo-300 p-2 size-10 rounded-full border-2 border-indigo-100 z-0">A</div>
+          <div className="bg-indigo-400 p-2 size-10 rounded-full border-2 border-indigo-100 z-10">B</div>
+          <div className="bg-indigo-500 p-2 size-10 rounded-full border-2 border-indigo-100 z-20">C</div>
         </div>
       </div>
+    </div>
   );
 }
