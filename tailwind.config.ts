@@ -36,6 +36,9 @@ export default {
           "0": "#FDDDBC",
         }
       },
+      margin:{
+        '5': '5px',
+      }
     },
   },
   plugins: [],
