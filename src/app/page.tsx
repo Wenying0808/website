@@ -109,14 +109,30 @@ export default function Home() {
             <p className="bg-indigo-300">I am 5</p>
         </div>
         <div className="grid grid-cols-3 gap-4 p-4">
-          <div className="bg-indigo-300">01</div>
+          <div className="bg-indigo-300 border-l-4 border-indigo-400">01</div>
           <div className="invisible ...">02</div>
-          <div className="bg-indigo-300">03</div>
+          <div className="bg-indigo-300 border-b-4 border-indigo-400">03</div>
         </div>
         <div className="container flex p-4 -space-x-1">
           <div className="bg-indigo-300 p-2 size-10 rounded-full border-2 border-indigo-100 z-0">A</div>
           <div className="bg-indigo-400 p-2 size-10 rounded-full border-2 border-indigo-100 z-10">B</div>
-          <div className="bg-indigo-500 p-2 size-10 rounded-full border-2 border-indigo-100 z-20">C</div>
+          <div className="bg-indigo-500 p-2 size-10 rounded-full border-4 border-indigo-100 z-20">C</div>
+        </div>
+        <div className="divide-y-2 divide-dotted divide-indigo-400">
+          <div className="text-indigo-400 p-2">01</div>
+          <div className="text-indigo-400 p-2">02</div>
+          <div className="text-indigo-500 p-2">03</div>
+        </div>
+        <div className="flex flex-col space-y-2 p-4">
+          <input type="text" className="border-dotted border-4 border-indigo-400" />
+          <button className="outline outline-offset-1 outline-4 outline-indigo-300 text-indigo-300">Button C</button>
+          <button className="... focus:ring-offset-2 focus:ring-4 focus:ring-indigo-700 text-indigo-300">Button C</button>
+        </div>
+        <div className="flex flex-col space-y-2 p-4 bg-white">
+          <div className="flex flex-col shadow-md shadow-indigo-300/50 p-4 hover:shadow-lg hover:shadow-indigo-300/50 transition-all duration-300">
+            Hello
+            <button className="bg-indigo-400 text-indigo-900 p-2 rounded-lg opacity-25">Button</button>
+          </div>
         </div>
       </div>
     </div>
