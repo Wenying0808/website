@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply bg-slate-900;
+    @apply bg-slate-100;
     font-family: "Montserrat", sans-serif;
   }
 }
