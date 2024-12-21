@@ -16,7 +16,7 @@ export const ProjectCard = ({ projectTitle, projectDescription, chipNames, img, 
     return(
         <Link
             href={projectLink}
-            className="xs:max-w-xs sm:max-w-smm md:max-w-md flex-col space-y-0 bg-white rounded-xl shadow-md hover:shadow-lg cursor-pointer">
+            className="xs:max-w-xs sm:max-w-smm md:max-w-md flex-col space-y-0 bg-white rounded-xl shadow-md hover:shadow-card-hover cursor-pointer">
             <Image src={img} alt={projectTitle} width={1000} height={200} className="rounded-tl-xl rounded-tr-xl "/>
             <div className="flex-col space-y-2 p-4">
                 <h2 className="text-base sm:text-lg font-semibold">{projectTitle}</h2>

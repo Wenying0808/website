@@ -26,6 +26,9 @@ export default {
           '2': '#F3FEFF'
         }
       },
+      boxShadow: {
+        'card-hover': '0px 0px 16px rgba(0, 0, 0, 0.2)',
+      },
       container: {
         center: true,
       },

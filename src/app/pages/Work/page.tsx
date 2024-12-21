@@ -1,5 +1,7 @@
 import { NavBar } from "@/app/components/NavBar/NavBar";
 import { ProjectCard } from "@/app/components/ProjectCard/ProjectCard";
+import { Footer } from "@/app/components/Footer/Footer";
+
 export default function Home() {
     const projectsInformation = [
         {
@@ -32,13 +34,14 @@ export default function Home() {
         },
     ]
     return(
-        <div className="flex">
+        <div className="flex flex-col">
             <NavBar/>
             <div className="flex flex-wrap place-items-center w-full justify-center gap-4 mt-[64px] p-8 sm:mt-[80px] sm:gap-8 sm:p-16 ">
                 {projectsInformation.map( project => (
                     <ProjectCard key={project.projectTitle} projectTitle={project.projectTitle} projectDescription={project.projectDescription} chipNames={project.chipNames} img={project.img} projectLink={project.projectLink}/>
                 ))}
             </div>
+            <Footer/>
         </div>
     )
 }
