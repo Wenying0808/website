@@ -16,12 +16,10 @@ export const ProjectCard = ({ projectTitle, projectDescription, chipNames, img, 
     return(
         <Link
             href={projectLink}
-            className="max-w-80 flex-col space-y-0 bg-white rounded-xl shadow-md hover:shadow-lg cursor-pointer">
-            <div className="container rounded-tl-xl rounded-tr-xl bg-slate-400">
-                <Image src={img} alt={projectTitle} width={1000} height={200} className="rounded-tl-xl rounded-tr-xl "/>
-            </div>
+            className="xs:max-w-xs sm:max-w-smm md:max-w-md flex-col space-y-0 bg-white rounded-xl shadow-md hover:shadow-lg cursor-pointer">
+            <Image src={img} alt={projectTitle} width={1000} height={200} className="rounded-tl-xl rounded-tr-xl "/>
             <div className="flex-col space-y-2 p-4">
-                <h2 className="text-base sm:text-lg font-bold">{projectTitle}</h2>
+                <h2 className="text-base sm:text-lg font-semibold">{projectTitle}</h2>
                 <div className="flex space-x-2">
                     {chipNames.map(name => (
                         <ChipOnProjectCard key={name} name={name} />
