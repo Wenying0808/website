@@ -21,6 +21,7 @@ export default {
       colors: {
         primary: '#4758DC',
         secondary: '#E1EBFF',
+        textParagraph:'#757575',
         background:{
           '1': '#FBFFFF',
           '2': '#F3FEFF'
@@ -28,9 +29,6 @@ export default {
       },
       boxShadow: {
         'card-hover': '0px 0px 16px rgba(0, 0, 0, 0.2)',
-      },
-      container: {
-        center: true,
       },
     },
   },
