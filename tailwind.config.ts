@@ -22,12 +22,14 @@ export default {
         primary: '#4758DC',
         secondary: '#E1EBFF',
         paragraph:'#757575',
+        icon: '#97999C',
         header: '#404040',
         background:{
           '1': '#FBFFFF',
           '2': '#F3FEFF',
           '3': '#EEF3FB',
-        }
+        },
+        iconButtonHover: '#F1F2F9',
       },
       boxShadow: {
         'card-hover': '0px 0px 16px rgba(0, 0, 0, 0.2)',
