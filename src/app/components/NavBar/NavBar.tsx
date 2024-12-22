@@ -18,7 +18,7 @@ export const NavBar = () => {
                     </Link>
                     <Link 
                         href="/pages/Work" 
-                        className={`${pathname === '/' ? 'text-black' : 'text-primary font-semibold'} hover:text-primary`}
+                        className={`${pathname === '/pages/Work' ? 'text-primary font-semibold' : 'text-black'} hover:text-primary`}
                     >
                         Work
                     </Link>

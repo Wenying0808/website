@@ -7,7 +7,7 @@
 @layer base {
   html {
     @apply bg-background-1;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
   }
 }
 
