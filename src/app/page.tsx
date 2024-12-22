@@ -1,4 +1,5 @@
 import { NavBar } from "@/app/components/NavBar/NavBar";
+import { SectionTitle } from "@/app/components/SectionTitle/SectionTitle";
 import { IllustrationDescriptionBlock } from "@/app/components/IllustrationDescriptionBlock/IllustrationDescriptionBlock";
 import { Footer } from "@/app/components/Footer/Footer";
 
@@ -42,16 +43,24 @@ export default function About() {
     return(
         <div className="flex flex-col">
             <NavBar/>
-            <div className="flex flex-wrap place-items-center justify-center gap-4 mt-[64px] p-8 sm:mt-[80px] sm:gap-8 sm:p-16 ">
-                {expertise.map(item => (
-                    <IllustrationDescriptionBlock key={item.title} img={item.img} title={item.title} description={item.description}/>
-                ))}
-            </div>
-            <div className="flex flex-wrap place-items-center justify-center gap-4 mt-[64px] p-8 sm:mt-[80px] sm:gap-8 sm:p-16 ">
-                {qualities.map(item => (
-                    <IllustrationDescriptionBlock key={item.title} img={item.img} title={item.title}/>
-                ))}
-            </div>
+            <main className="flex flex-col place-items-center justify-center mt-page-top-s sm:mt-page-top-l">
+                <div className="flex flex-col gap-section place-items-center w-full p-section bg-background-2">
+                    <SectionTitle title="Expertise"/>
+                    <div className="flex flex-wrap place-items-center justify-center gap-4 sm:gap-8">
+                        {expertise.map(item => (
+                            <IllustrationDescriptionBlock key={item.title} img={item.img} title={item.title} description={item.description}/>
+                        ))}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-section place-items-center w-full p-section bg-background-3">
+                        <SectionTitle title="I am"/>
+                        <div className="flex flex-wrap place-items-center justify-center gap-4 sm:gap-8">
+                            {qualities.map(item => (
+                                <IllustrationDescriptionBlock key={item.title} img={item.img} title={item.title}/>
+                            ))}
+                        </div>
+                </div>
+            </main>
             <Footer/>
         </div>
     )

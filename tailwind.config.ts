@@ -21,15 +21,27 @@ export default {
       colors: {
         primary: '#4758DC',
         secondary: '#E1EBFF',
-        textParagraph:'#757575',
+        paragraph:'#757575',
+        header: '#221F20',
         background:{
           '1': '#FBFFFF',
-          '2': '#F3FEFF'
+          '2': '#F3FEFF',
+          '3': '#EEF3FB',
         }
       },
       boxShadow: {
         'card-hover': '0px 0px 16px rgba(0, 0, 0, 0.2)',
       },
+      padding: {
+        'section': '60px'
+      },
+      margin: {
+        'page-top-s': '64px',
+        'page-top-l': '80px',
+      },
+      gap: {
+        'section': '20px'
+      }
     },
   },
   plugins: [],
