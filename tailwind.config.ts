@@ -22,7 +22,7 @@ export default {
         primary: '#4758DC',
         secondary: '#E1EBFF',
         paragraph:'#757575',
-        header: '#221F20',
+        header: '#404040',
         background:{
           '1': '#FBFFFF',
           '2': '#F3FEFF',
@@ -40,7 +40,8 @@ export default {
         'page-top-l': '80px',
       },
       gap: {
-        'section': '20px'
+        'section-s': '20px',
+        'section-l': '30px',
       }
     },
   },

@@ -44,7 +44,7 @@ export default function About() {
         <div className="flex flex-col">
             <NavBar/>
             <main className="flex flex-col place-items-center justify-center mt-page-top-s sm:mt-page-top-l">
-                <div className="flex flex-col gap-section place-items-center w-full p-section bg-background-2">
+                <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section bg-background-2">
                     <SectionTitle title="Expertise"/>
                     <div className="flex flex-wrap place-items-center justify-center gap-4 sm:gap-8">
                         {expertise.map(item => (
@@ -52,7 +52,7 @@ export default function About() {
                         ))}
                     </div>
                 </div>
-                <div className="flex flex-col gap-section place-items-center w-full p-section bg-background-3">
+                <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section bg-background-3">
                         <SectionTitle title="I am"/>
                         <div className="flex flex-wrap place-items-center justify-center gap-4 sm:gap-8">
                             {qualities.map(item => (
