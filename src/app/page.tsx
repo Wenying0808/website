@@ -44,6 +44,12 @@ export default function About() {
         <div className="flex flex-col">
             <NavBar/>
             <main className="flex flex-col place-items-center justify-center mt-page-top-s sm:mt-page-top-l">
+                <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section bg-background-1">
+                    <div className="flex flex-col place-items-center justify-center gap-4 sm:gap-8">
+                        <h1 className="text-header font-medium text-lg">Wen-Ying Chang</h1>  
+                        <p className="text-paragraph max-w-[600px] text-center text-sm">I'm a UX Designer and Front-End Developer passionate about creating intuitive and visually stunning web applications. With years of experience, I excel at transforming complex concepts into seamless user journeys. My expertise lies in conducting thorough user research, crafting engaging designs, and translating those designs into efficient, performant code. I'm dedicated to delivering exceptional digital experiences that captivate users and drive business success.</p>  
+                    </div>
+                </div>
                 <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section bg-background-2">
                     <SectionTitle title="Expertise"/>
                     <div className="flex flex-wrap place-items-center justify-center gap-4 sm:gap-8">
