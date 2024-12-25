@@ -38,7 +38,7 @@ export default function FrontEndDevPage(){
         },
     ]
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col dark:bg-background-dark-1">
             <NavBar/>
             <main className="flex flex-col place-items-center justify-center mt-page-top-s sm:mt-page-top-l">
                 <div className="flex flex-wrap gap-section-s sm:gap-section-l justify-center w-full p-section">

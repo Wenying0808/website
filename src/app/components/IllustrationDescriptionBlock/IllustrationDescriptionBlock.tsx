@@ -13,8 +13,8 @@ export const IllustrationDescriptionBlock = ({img, title, description}: Props) =
                 <Image src={img} alt={title} width={200} height={200}/>
             </div>
             <div className="flex flex-col gap-1 max-w-[300px]">
-                <h2 className="text-sm sm:text-base text-header font-semibold text-center break-words">{title}</h2>
-                <p className="text-xs sm:text-sm text-paragraph font-medium text-center break-words">{description}</p>
+                <h2 className="text-sm sm:text-base text-header-light dark:text-header-dark font-semibold text-center break-words">{title}</h2>
+                <p className="text-xs sm:text-sm text-paragraph-light dark:text-paragraph-dark font-medium text-center break-words">{description}</p>
             </div>
         </div>
     )

@@ -34,7 +34,7 @@ export default function Home() {
         },
     ]
     return(
-        <div className="flex flex-col">
+        <div className="flex flex-col dark:bg-background-dark-1">
             <NavBar/>
             <div className="flex flex-wrap place-items-center w-full justify-center gap-4 mt-[64px] p-8 sm:mt-[80px] sm:gap-8 sm:p-16 ">
                 {projectsInformation.map( project => (

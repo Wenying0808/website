@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply bg-background-1;
+    @apply bg-background-light-1;
     font-family: "Open Sans", sans-serif;
   }
 }
