@@ -19,7 +19,7 @@ interface Props {
 export const SideProjectCard = ({ img, projectTitle, projectDescription, projectLink, githubLink, chipNames }: Props) => {
     return(
         <div
-            className="flex gap-4 flex-col md:flex-row max-w-[240px] md:max-w-[520px] p-4 bg-background-light-0 dark:bg-background-dark-0 rounded-xl shadow-md hover:hover:shadow-card-hover dark:border-solid dark:border-2 dark:border-gray-800 dark:hover:border-gray-400">
+            className="flex gap-4 flex-col md:flex-row max-w-[240px] md:max-w-[520px] p-4 bg-background-light-0 dark:bg-background-dark-0 rounded-xl shadow-md hover:hover:shadow-card-hover dark:border-solid dark:border dark:border-background-dark-3 dark:hover:border-primary-dark">
             <Image src={img} alt={projectTitle} width={240} height={200} className="rounded-md"/>
             <div className="flex flex-col gap-2 justify-between">
                 <div className="flex-col space-y-2">

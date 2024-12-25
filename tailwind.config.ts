@@ -22,9 +22,12 @@ export default {
       colors: {
         primary: {
           'light': '#4758DC',
-          'dark': '#8B9ACE'
+          'dark': '#818CF8',
         },
-        secondary: '#E1EBFF', // chip 
+        secondary: {
+          'light': '#E1EBFF', // chip 
+          'dark': '#252A33', 
+        },
         header: {
           'light':'#404040',
           'dark': '#E5E5E5',
