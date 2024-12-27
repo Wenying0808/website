@@ -44,7 +44,7 @@ export default function About() {
     return(
         <div className="flex flex-col dark:bg-background-dark-0">
             <NavBar/>
-            <main className="flex flex-col place-items-center justify-center mt-page-top-s sm:mt-page-top-l">
+            <main className="flex flex-col place-items-center justify-center mt-page-top-s md:mt-page-top-l">
                 <div className="flex flex-col sm:flex-row gap-section-s sm:gap-section-l place-items-center justify-center w-full p-section bg-background-light-1 dark:bg-background-dark-3">
                     <Image src="/images/img_about_profile.png" alt="profile" width={200} height={300}/>
                     <div className="flex flex-col gap-2 sm:gap-4 place-items-center sm:place-items-start">

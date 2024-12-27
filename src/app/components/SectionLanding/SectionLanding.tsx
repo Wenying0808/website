@@ -8,7 +8,7 @@ interface Props {
     year?: string,
 }
 
-export const LandingSection= ({ src, company, product, role, year }: Props) => {
+export const SectionLanding = ({ src, company, product, role, year }: Props) => {
     return (
         <div className="w-full relative">
             <div className="absolute top-0 left-0 p-2 sm:p-4 bg-white opacity-40 text-black text-xs sm:text-sm text-center w-full">
