@@ -13,6 +13,7 @@ import AutoFixHighOutlinedIcon from '@mui/icons-material/AutoFixHighOutlined';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import Image from "next/image";
+import { SectionButton } from "@/app/components/SectionButton/SectionButton";
 
 export default function BreathingTunesPage() {
     const ecosystem = [
@@ -83,6 +84,7 @@ export default function BreathingTunesPage() {
                         ))}
                     </div>
                     <Image src="/images/img_work-Somnox-Proposal.png" alt="Proposal" width={2000} height={300}/>
+                    <SectionButton label="Explore App" url="https://somnox.com/app/"/>
                 </div>
             </main>
             <Footer/>

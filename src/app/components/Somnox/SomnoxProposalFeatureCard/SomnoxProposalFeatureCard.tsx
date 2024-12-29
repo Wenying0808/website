@@ -5,7 +5,7 @@ interface Props{
 
 export const SomnoxProposalFeatureCard = ({icon, label}: Props) => {
     return(
-        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 hover:bg-white hover:shadow-lg hover:dark:bg-background-dark-1 rounded-xl p-4">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 hover:bg-white hover:shadow-lg hover:dark:bg-background-dark-2 rounded-xl p-4">
             <div className="flex items-center justify-center text-primary-light dark:text-primary-dark">
                 {icon}
             </div>
