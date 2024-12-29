@@ -41,7 +41,7 @@ export default function FrontEndDevPage(){
         <div className="flex flex-col dark:bg-background-dark-1">
             <NavBar/>
             <main className="flex flex-col place-items-center justify-center mt-page-top-s md:mt-page-top-l">
-                <div className="flex flex-wrap gap-section-s sm:gap-section-l justify-center w-full p-section">
+                <div className="flex flex-wrap gap-section-s sm:gap-section-l justify-center w-full p-section-s sm:p-section-l">
                     {projects.map(item => (
                         <SideProjectCard key={item.projectTitle} img={item.img} projectTitle={item.projectTitle} projectDescription={item.projectDescription} projectLink={item.projectLink} githubLink={item.githubLink} chipNames={item.chipNames}/>
                     ))}

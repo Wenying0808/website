@@ -64,7 +64,8 @@ export default {
         'card-hover': '0px 0px 16px rgba(0, 0, 0, 0.2)',
       },
       padding: {
-        'section': '60px'
+        'section-s': '30px',
+        'section-l': '60px'
       },
       margin: {
         'page-top-s': '64px',

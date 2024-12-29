@@ -34,9 +34,9 @@ export default function Home() {
         },
     ]
     return(
-        <div className="flex flex-col dark:bg-background-dark-1">
+        <div className="flex flex-col dark:bg-background-dark-2">
             <NavBar/>
-            <div className="flex flex-wrap place-items-center w-full justify-center gap-4 mt-[64px] p-8 sm:mt-[80px] sm:gap-8 sm:p-16 ">
+            <div className="flex flex-wrap place-items-center w-full justify-center gap-4 mt-[64px] p-section-s sm:p-section-l sm:mt-[80px] sm:gap-8 sm:p-16 ">
                 {projectsInformation.map( project => (
                     <ProjectCard key={project.projectTitle} projectTitle={project.projectTitle} projectDescription={project.projectDescription} chipNames={project.chipNames} img={project.img} projectLink={project.projectLink}/>
                 ))}
