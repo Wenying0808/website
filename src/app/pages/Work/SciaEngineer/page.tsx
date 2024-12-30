@@ -8,6 +8,7 @@ import { SciaEngineerFeatureCard } from "@/app/components/SciaEngineer/SciaEngin
 import { SciaEngineerStructureIcon } from "@/app/components/icons/SciaEngineerStructure/SciaEngineerStructure";
 import { SciaEngineerLoadIcon } from "@/app/components/icons/SciaEngineerLoad/SciaEngineerLoad";
 import { SciaEngineerResultsIcon } from "@/app/components/icons/SciaEngineerResults/SciaEngineerResults";
+import { MediaPlayer } from "@/app/components/MediaPlayer/MediaPlayer";
 
 export default function SciaEngineerPage() {
     const features = [
@@ -52,6 +53,18 @@ export default function SciaEngineerPage() {
         },
     ];
 
+    const releases = [
+        {   label: "Release 21.0",
+            url: "https://www.youtube.com/embed/ygnvInHk3Yk?si=Jdm9EORhmA5uRndL",
+        },
+        {   label: "Release 21.1",
+            url: "https://www.youtube.com/embed/e2ZXzvIcLaU?si=FVnyRtAaepG2hPSp&amp;start=572",
+        },
+        {   label: "Release 22.0",
+            url: "https://www.youtube.com/embed/SoSGCBfopjU?si=arUOAZGAniguDTJ8&amp;start=572",
+        },
+    ]
+
     return(
         <div className="flex flex-col dark:bg-background-dark-0">
             <NavBar/>
@@ -72,6 +85,14 @@ export default function SciaEngineerPage() {
                     <div className="flex flex-col gap-4">
                         {features.map(item => (
                             <SciaEngineerFeatureCard img={item.img} icon={item.icon} title={item.title} description={item.description}/>
+                        ))}
+                    </div>
+                </div>
+                <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section-s sm:p-section-l bg-background-light-3 dark:bg-background-dark-3">
+                    <SectionTitle title="Releases"/>
+                    <div className="flex flex-col sm:flex-row gap-8">
+                        {releases.map(item => (
+                            <MediaPlayer label={item.label} url={item.url}/>
                         ))}
                     </div>
                 </div>
