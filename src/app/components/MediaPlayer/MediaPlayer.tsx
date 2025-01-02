@@ -23,7 +23,7 @@ export const MediaPlayer = ({ label, url }: Props) => {
             <div className="rounded-md overflow-hidden">
                 <ReactPlayer url={url} width="240px" height="180px"/>
             </div>
-            <p className="text-primary-light dark:text-primary-dark">{label}</p>
+            <p className="text-sm sm:text-base text-primary-light dark:text-primary-dark">{label}</p>
         </div>
     );
 };
