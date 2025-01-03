@@ -11,7 +11,7 @@ interface Props {
     year?: string,
 }
 
-export const SectionLanding = ({ src, company, product, role, year }: Props) => {
+export const SectionLanding = ({ src, product, role }: Props) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
