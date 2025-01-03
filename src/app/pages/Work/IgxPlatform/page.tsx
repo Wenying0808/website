@@ -44,8 +44,8 @@ export default function IgxPlatformPage() {
                 <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section-s sm:p-section-l bg-background-light-2 dark:bg-background-dark-3">
                     <SectionTitle title="Releases"/>
                     <div className="flex flex-col sm:flex-row gap-8">
-                        {releases.map(item => (
-                            <MediaPlayer label={item.label} url={item.url}/>
+                        {releases.map((item, index) => (
+                            <MediaPlayer key={index} label={item.label} url={item.url}/>
                         ))}
                     </div>
                 </div>

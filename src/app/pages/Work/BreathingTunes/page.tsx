@@ -10,7 +10,6 @@ import { SomnoxEcoSystemSmartWatchIcon } from "@/app/components/icons/SomnoxEcoS
 import { SomnoxProposalFeatureCard } from "@/app/components/Somnox/SomnoxProposalFeatureCard/SomnoxProposalFeatureCard";
 import StairsOutlinedIcon from '@mui/icons-material/StairsOutlined';
 import AutoFixHighOutlinedIcon from '@mui/icons-material/AutoFixHighOutlined';
-import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import Image from "next/image";
 import { SectionButton } from "@/app/components/SectionButton/SectionButton";
@@ -79,8 +78,8 @@ export default function BreathingTunesPage() {
                 <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full px-0 py-section-s sm:py-section-l bg-background-light-1 dark:bg-background-dark-3">
                     <SectionTitle title="Outcomes"/>
                     <div className="flex flex-col gap-1 sm:gap-2 p-4">
-                        {proposal.map( item => (
-                            <SomnoxProposalFeatureCard key={item.label} icon={item.icon} label={item.label}/>
+                        {proposal.map( (item, index) => (
+                            <SomnoxProposalFeatureCard key={index} icon={item.icon} label={item.label}/>
                         ))}
                     </div>
                     <Image src="/images/img_work-Somnox-Proposal.png" alt="Proposal" width={2000} height={300}/>
