@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { GitHubIcon } from "@/app/components/icons/GitHub/GithubIcon";
+import { GitHubIcon } from "@/app/components/icons/GitHub/GitHubIcon";
 import { LinkedInIcon } from "@/app/components/icons/LinkedIn/LinkedInIcon";
 import { MediumIcon } from "@/app/components/icons/Medium/MediumIcon";
 import { FigmaIcon } from "@/app/components/icons/Figma/FigmaIcon";
