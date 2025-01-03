@@ -84,7 +84,7 @@ export default function SciaEngineerPage() {
                     <SectionTitle title="Outcomes"/>
                     <div className="flex flex-col gap-4">
                         {features.map(item => (
-                            <SciaEngineerFeatureCard img={item.img} icon={item.icon} title={item.title} description={item.description}/>
+                            <SciaEngineerFeatureCard key={item.title} img={item.img} icon={item.icon} title={item.title} description={item.description}/>
                         ))}
                     </div>
                 </div>
@@ -92,7 +92,7 @@ export default function SciaEngineerPage() {
                     <SectionTitle title="Releases"/>
                     <div className="flex flex-col sm:flex-row gap-8">
                         {releases.map(item => (
-                            <MediaPlayer label={item.label} url={item.url}/>
+                            <MediaPlayer key={item.label} label={item.label} url={item.url}/>
                         ))}
                     </div>
                 </div>

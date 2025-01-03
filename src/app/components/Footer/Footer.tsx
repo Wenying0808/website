@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { GitHubIcon } from "@/app/components/icons/GitHub/GitHubIcon";

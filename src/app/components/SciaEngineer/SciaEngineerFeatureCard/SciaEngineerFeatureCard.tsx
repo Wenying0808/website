@@ -16,8 +16,8 @@ export const SciaEngineerFeatureCard = ({img, icon, title, description}: Props) 
                     <h2 className="text-sm sm:text-base font-medium sm:font-semibold text-header-light dark:text-header-dark max-w-[300px]">{title}</h2>
                 </div>
                 <div className="flex flex-col gap-1 pl-2 text-xs sm:text-sm">
-                    {description.map(li => (
-                        <li className="text-paragraph-light dark:text-paragraph-dark">{li}</li>
+                    {description.map((li, index) => (
+                        <li key={index} className="text-paragraph-light dark:text-paragraph-dark">{li}</li>
                     ))}
                 </div>
             </div>
