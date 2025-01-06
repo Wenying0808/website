@@ -36,6 +36,14 @@ export default function FrontEndDevPage(){
             githubLink: "https://github.com/Wenying0808/table-component",
             chipNames: ["Typescript", "React", "MongoDB"],
         },
+        {
+            img:"/images/img_FEP-Website.png",
+            projectTitle: "Website",
+            projectDescription: "A personal website to showcase expertise and portfolio.",
+            projectLink: "https://wenying-portfolio.vercel.app",
+            githubLink: "https://github.com/Wenying0808/website",
+            chipNames: ["Next.js", "Tailwind", "Vercel"],
+        },
     ]
     return (
         <div className="flex flex-col dark:bg-background-dark-1">
