@@ -5,7 +5,7 @@ import { SideProjectCard } from "@/app/components/SideProjectCard/SideProjectCar
 export default function FrontEndDevPage(){
     const projects = [
         {
-            img:"/images/img_work-FrontEndDev.png",
+            img:"/images/img_FEP-FinanceFlow.png",
             projectTitle: "Finance Flow",
             projectDescription: "A personal finance app that helps users track and manage their expenses effectively.",
             projectLink: "https://wenying0808.github.io/finance-flow/",
@@ -13,7 +13,7 @@ export default function FrontEndDevPage(){
             chipNames: ["Typescript", "React", "Firebase"],
         },
         {
-            img:"/images/img_work-FrontEndDev.png",
+            img:"/images/img_FEP-CancerData.png",
             projectTitle: "Cancer Data",
             projectDescription: "An interactive app that visualizes global cancer data through dynamic charts and graphs.",
             projectLink: "https://wenying0808.github.io/cancer-data/",
@@ -21,7 +21,7 @@ export default function FrontEndDevPage(){
             chipNames: ["Javascript", "React", "D3.js"],
         },
         {
-            img:"/images/img_work-FrontEndDev.png",
+            img:"/images/img_FEP-Pomodoro.png",
             projectTitle: "Pomodoro",
             projectDescription: "A productivity tool that uses the Pomodoro Technique to enhance time management and focus.",
             projectLink: "https://wenying0808.github.io/pomodoro/",
@@ -29,7 +29,7 @@ export default function FrontEndDevPage(){
             chipNames: ["Javascript", "React", "Storybook"],
         },
         {
-            img:"/images/img_work-FrontEndDev.png",
+            img:"/images/img_FEP-TableComponents.png",
             projectTitle: "Table Components",
             projectDescription: "An interactive table components with row expanding, column sorting, filtering, and reordering features.",
             projectLink: "https://table-component-wenying0808s-projects.vercel.app",
