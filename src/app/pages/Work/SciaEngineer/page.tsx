@@ -11,8 +11,7 @@ import { SciaEngineerStructureIcon } from "@/app/components/icons/SciaEngineerSt
 import { SciaEngineerLoadIcon } from "@/app/components/icons/SciaEngineerLoad/SciaEngineerLoad";
 import { SciaEngineerResultsIcon } from "@/app/components/icons/SciaEngineerResults/SciaEngineerResults";
 import { MediaPlayer } from "@/app/components/MediaPlayer/MediaPlayer";
-import { useState } from "react";
-import { IconButton } from "@mui/material";
+import { useEffect, useState } from "react";
 import { IconButtonWithTooltip } from "@/app/components/IconButtonWithTooltip/IconButtonWithTooltip";
 import NavigateBeforeRoundedIcon from '@mui/icons-material/NavigateBeforeRounded';
 import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
@@ -73,12 +72,24 @@ export default function SciaEngineerPage() {
     ]
 
     const [currentFeatureCardIndex, setCurrentFeatureCardIndex] = useState(0);
+    const [isFeatureCardAnimating, setIsFeatureCardAnimating] = useState(false);
+
     const handleNextFeatureCard = () => {
+        setIsFeatureCardAnimating(true); 
         setCurrentFeatureCardIndex((prevIndex) => ((prevIndex === features.length - 1) ? 0 : (prevIndex + 1) % features.length))
     };
     const handlePreviousFeatureCard = () => {
+        setIsFeatureCardAnimating(true); 
         setCurrentFeatureCardIndex((prevIndex) => (prevIndex === 0 ? features.length - 1 : (prevIndex - 1) % features.length))
     };
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsFeatureCardAnimating(false);
+        }, 300);
+    
+        return () => clearTimeout(timer);
+    }, [currentFeatureCardIndex]);
 
     return(
         <div className="flex flex-col dark:bg-background-dark-0">
@@ -97,7 +108,6 @@ export default function SciaEngineerPage() {
                 </div>
                 <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section-s sm:p-section-l bg-background-light-2 dark:bg-background-dark-2">
                     <SectionTitle title="Outcomes"/>
-                    
                     <div className="flex flex-col gap-4 place-items-center justify-center">
                         <div className="flex flex-row gap-4 place-items-center justify-center">
                             <IconButtonWithTooltip icon={<NavigateBeforeRoundedIcon/>} onClick={handlePreviousFeatureCard} />
@@ -106,14 +116,15 @@ export default function SciaEngineerPage() {
                             </div>
                             <IconButtonWithTooltip icon={<NavigateNextRoundedIcon/>} onClick={handleNextFeatureCard} />
                         </div>
-                        <SciaEngineerFeatureCard 
-                            key={features[currentFeatureCardIndex].title} 
-                            img={features[currentFeatureCardIndex].img} 
-                            icon={features[currentFeatureCardIndex].icon} 
-                            title={features[currentFeatureCardIndex].title} 
-                            description={features[currentFeatureCardIndex].description}
-                        />
-
+                        <div className={`transition-opacity duration-400 ${isFeatureCardAnimating ? 'opacity-50' : 'opacity-100'}`}>
+                            <SciaEngineerFeatureCard 
+                                key={features[currentFeatureCardIndex].title} 
+                                img={features[currentFeatureCardIndex].img} 
+                                icon={features[currentFeatureCardIndex].icon} 
+                                title={features[currentFeatureCardIndex].title} 
+                                description={features[currentFeatureCardIndex].description}
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section-s sm:p-section-l bg-background-light-3 dark:bg-background-dark-3">
