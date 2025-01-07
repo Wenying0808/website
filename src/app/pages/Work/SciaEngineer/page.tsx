@@ -1,3 +1,5 @@
+'use client'
+
 import { NavBar } from "@/app/components/NavBar/NavBar";
 import { Footer } from "@/app/components/Footer/Footer";
 import { SectionLanding } from "@/app/components/SectionLanding/SectionLanding";
@@ -9,11 +11,16 @@ import { SciaEngineerStructureIcon } from "@/app/components/icons/SciaEngineerSt
 import { SciaEngineerLoadIcon } from "@/app/components/icons/SciaEngineerLoad/SciaEngineerLoad";
 import { SciaEngineerResultsIcon } from "@/app/components/icons/SciaEngineerResults/SciaEngineerResults";
 import { MediaPlayer } from "@/app/components/MediaPlayer/MediaPlayer";
+import { useState } from "react";
+import { IconButton } from "@mui/material";
+import { IconButtonWithTooltip } from "@/app/components/IconButtonWithTooltip/IconButtonWithTooltip";
+import NavigateBeforeRoundedIcon from '@mui/icons-material/NavigateBeforeRounded';
+import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
 
 export default function SciaEngineerPage() {
     const features = [
         {
-            img:"/images/img_work-SciaEngineer-feature-inputTable.png",
+            img: "/images/img_work-SciaEngineer-feature-inputTable.png",
             icon: <SciaEngineerStructureIcon/>,
             title: "Import and Adjust Model Flexibly via Input Table",
             description: [
@@ -23,7 +30,7 @@ export default function SciaEngineerPage() {
             ]
         },
         {
-            img:"/images/img_work-SciaEngineer-feature-markingMenu.png",
+            img: "/images/img_work-SciaEngineer-feature-markingMenu.png",
             icon: <SciaEngineerLoadIcon/>,
             title: "Model/Load Structure Efficiently via Marking Menu",
             description: [
@@ -33,7 +40,7 @@ export default function SciaEngineerPage() {
             ]
         },
         {
-            img:"/images/img_work-SciaEngineer-feature-resultsTable.png",
+            img: "/images/img_work-SciaEngineer-feature-resultsTable.png",
             icon: <SciaEngineerResultsIcon/>,
             title: "Make informative and transparent decisions via Results Table",
             description: [
@@ -43,7 +50,7 @@ export default function SciaEngineerPage() {
             ]
         },
         {
-            img:"/images/img_work-SciaEngineer-feature-maxScreen.png",
+            img: "/images/img_work-SciaEngineer-feature-maxScreen.png",
             icon: <SciaEngineerStructureIcon/>,
             title: "Minimize the UI components",
             description: [
@@ -65,6 +72,14 @@ export default function SciaEngineerPage() {
         },
     ]
 
+    const [currentFeatureCardIndex, setCurrentFeatureCardIndex] = useState(0);
+    const handleNextFeatureCard = () => {
+        setCurrentFeatureCardIndex((prevIndex) => ((prevIndex === features.length - 1) ? 0 : (prevIndex + 1) % features.length))
+    };
+    const handlePreviousFeatureCard = () => {
+        setCurrentFeatureCardIndex((prevIndex) => (prevIndex === 0 ? features.length - 1 : (prevIndex - 1) % features.length))
+    };
+
     return(
         <div className="flex flex-col dark:bg-background-dark-0">
             <NavBar/>
@@ -75,17 +90,30 @@ export default function SciaEngineerPage() {
                     <SectionParagraph paragraph="SCIA Engineer enables civil engineers to model, analyze, visualize data, and iteratively optimize structural designs for optimal solutions."/>
                 </div>
                 <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section-s sm:p-section-l bg-background-light-3 dark:bg-background-dark-3">
-                    <SectionTitle title="Workflows & Challenges "/>
+                    <SectionTitle title="Workflows & Challenges"/>
                     <SectionParagraph paragraph="Civil engineers aim to create sustainable and resilient infrastructures through iterating the structural design through loading various conditions for testing and conducting analyses of the outcomes. Here are the main workflows and identified pain points:"/>
                     <Image src="/images/img_work-SciaEngineer-workflow-lightMode.png" alt="workflow" width={600} height={800} className="block dark:hidden"/>
                     <Image src="/images/img_work-SciaEngineer-workflow-darkMode.png" alt="workflow" width={600} height={800} className="hidden dark:block"/>
                 </div>
                 <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section-s sm:p-section-l bg-background-light-2 dark:bg-background-dark-2">
                     <SectionTitle title="Outcomes"/>
-                    <div className="flex flex-col gap-4">
-                        {features.map(item => (
-                            <SciaEngineerFeatureCard key={item.title} img={item.img} icon={item.icon} title={item.title} description={item.description}/>
-                        ))}
+                    
+                    <div className="flex flex-col gap-4 place-items-center justify-center">
+                        <div className="flex flex-row gap-4 place-items-center justify-center">
+                            <IconButtonWithTooltip icon={<NavigateBeforeRoundedIcon/>} onClick={handlePreviousFeatureCard} />
+                            <div className="text-xs sm:text-sm text-paragraph-light dark:text-paragraph-dark">
+                                {(currentFeatureCardIndex + 1 )} / {features.length}
+                            </div>
+                            <IconButtonWithTooltip icon={<NavigateNextRoundedIcon/>} onClick={handleNextFeatureCard} />
+                        </div>
+                        <SciaEngineerFeatureCard 
+                            key={features[currentFeatureCardIndex].title} 
+                            img={features[currentFeatureCardIndex].img} 
+                            icon={features[currentFeatureCardIndex].icon} 
+                            title={features[currentFeatureCardIndex].title} 
+                            description={features[currentFeatureCardIndex].description}
+                        />
+
                     </div>
                 </div>
                 <div className="flex flex-col gap-section-s sm:gap-section-l place-items-center w-full p-section-s sm:p-section-l bg-background-light-3 dark:bg-background-dark-3">
