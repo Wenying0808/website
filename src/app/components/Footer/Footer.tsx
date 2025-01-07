@@ -17,11 +17,13 @@ export const Footer = () => {
             alt: 'github',
             url: 'https://github.com/Wenying0808',
         },
+        /*
         {
             icon: <FigmaIcon/>,
             alt: 'figma',
             url: '',
         },
+        */
         {
             icon: <MediumIcon/>,
             alt: 'medium',
