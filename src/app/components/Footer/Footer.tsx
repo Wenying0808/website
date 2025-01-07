@@ -3,7 +3,7 @@ import Link from "next/link";
 import { GitHubIcon } from "@/app/components/icons/GitHub/GitHubIcon";
 import { LinkedInIcon } from "@/app/components/icons/LinkedIn/LinkedInIcon";
 import { MediumIcon } from "@/app/components/icons/Medium/MediumIcon";
-import { FigmaIcon } from "@/app/components/icons/Figma/FigmaIcon";
+/*import { FigmaIcon } from "@/app/components/icons/Figma/FigmaIcon";*/
 
 export const Footer = () => {
     const socialInfo = [
