@@ -13,7 +13,13 @@ export const SectionButton = ({ label, url }: Props) => {
     };
 
     return(
-        <Button onClick={handleClick} variant="contained" size="small" sx={{ textTransform: 'none' }} className="bg-primary-light dark:bg-primary-dark rounded-full px-4 hover:scale-105">
+        <Button 
+            onClick={handleClick} 
+            variant="contained" 
+            size="small" 
+            sx={{ textTransform: 'none' }} 
+            className="rounded-full px-4 bg-primary-light dark:bg-primary-dark  hover:scale-105"
+        >
             {label}
         </Button>
     )
