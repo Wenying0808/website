@@ -18,7 +18,7 @@ export const SectionButton = ({ label, url }: Props) => {
             variant="contained" 
             size="small" 
             sx={{ textTransform: 'none' }} 
-            className="rounded-full px-4 bg-primary-light dark:bg-primary-dark  hover:scale-105"
+            className="rounded-full px-4 bg-primary-light dark:bg-primary-dark  hover:scale-105 !important"
         >
             {label}
         </Button>
